@@ -28,23 +28,23 @@ export default {
       status: ''
     }
   },
+  created () {
+    console.log('vue created!')
+    const callbacks = {
+      onUpdate(state) {
+        console.log('onUpdate', JSON.stringify(state));
+        if ('tint' in state) {
+          alert(state.tint)
+        }
+        if ('spin' in state) {
+          console.log(state.spin)
+          status = state.spin
+        }
+      },
+    }
+    assistantCanvas.ready(callbacks)
+  },
   methods: {
-    created () {
-      console.log('vue created!')
-      const callbacks = {
-        onUpdate(state) {
-          console.log('onUpdate', JSON.stringify(state));
-          if ('tint' in state) {
-            alert(state.tint)
-          }
-          if ('spin' in state) {
-            console.log(state.spin)
-            status = state.spin
-          }
-        },
-      }
-      assistantCanvas.ready(callbacks)
-    },
     bmiStart () {
       alert('bmi測定開始')
       assistantCanvas.sendTextQuery('bmi');
