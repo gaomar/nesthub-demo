@@ -25,7 +25,7 @@
 export default {
   data () {
     return {
-      status: ''
+      status: 'aaa'
     }
   },
   created () {
@@ -38,7 +38,7 @@ export default {
         }
         if ('spin' in state) {
           console.log(state.spin)
-          status = state.spin
+          this.status = state.spin
         }
       },
     }
