@@ -37,7 +37,7 @@ export default {
             alert(state.tint)
           }
           if ('spin' in state) {
-            state = state.spin
+            status = state.spin
           }
         },
       }
