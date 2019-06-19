@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+!functions/node_modules/
 
 # local env files
 .env.local
@@ -18,4 +19,3 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-node_modules
