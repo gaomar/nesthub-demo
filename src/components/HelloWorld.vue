@@ -30,6 +30,7 @@ export default {
   },
   created () {
     console.log('vue created!')
+    var me = this
     const callbacks = {
       onUpdate(state) {
         console.log('this=', this)
@@ -39,10 +40,10 @@ export default {
         }
         if ('spin' in state) {
           console.log(state.spin)
-          this.status = 'がおまる'
+          me.status = 'がおまる！'
         }
       },
-    }.bind(this)
+    }
     assistantCanvas.ready(callbacks)
   },
   methods: {
