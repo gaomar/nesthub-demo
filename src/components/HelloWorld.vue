@@ -25,20 +25,21 @@
 export default {
   data () {
     return {
-      status: 'aaa'
+      status: ''
     }
   },
   created () {
     console.log('vue created!')
     const callbacks = {
       onUpdate(state) {
+        console.log('this=', this)
         console.log('onUpdate', JSON.stringify(state));
         if ('tint' in state) {
           alert(state.tint)
         }
         if ('spin' in state) {
           console.log(state.spin)
-          this.status = state.spin
+          this.status = 'がおまる'
         }
       },
     }
@@ -47,6 +48,7 @@ export default {
   methods: {
     bmiStart () {
       alert('bmi測定開始')
+      this.status = 'がおまる'
       assistantCanvas.sendTextQuery('bmi');
     }
   }
