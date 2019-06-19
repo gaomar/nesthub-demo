@@ -6,7 +6,7 @@
     >
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
-          こんにちはNest Hub
+          こんにちはNest Hub！
         </h1>
         <v-btn large color="success" @click="bmiStart">BMI測定開始</v-btn>
       </v-flex>
@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     created () {
+      console.log('vue created!')
       const callbacks = {
         onUpdate(state) {
           console.log('onUpdate', JSON.stringify(state));
@@ -37,6 +38,7 @@ export default {
             alert(state.tint)
           }
           if ('spin' in state) {
+            console.log(state.spin)
             status = state.spin
           }
         },
