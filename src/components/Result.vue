@@ -15,7 +15,7 @@
         mb-5
       >
         <h3 class="display-2 font-weight-bold mb-3">
-        {{status}}
+        {{result}}
         </h3>
       </v-flex>
 
@@ -36,7 +36,7 @@
 export default {
   data () {
     return {
-      status: ''
+      result: ''
     }
   },
   created () {
@@ -44,7 +44,7 @@ export default {
     const callbacks = {
       onUpdate(state) {
         if ('bmi' in state) {
-          me.status = state.bmi
+          me.result = state.bmi
         }
       },
     }
