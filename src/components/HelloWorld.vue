@@ -11,6 +11,12 @@
         <v-btn large color="success" @click="bmiStart">BMI測定開始</v-btn>
       </v-flex>
 
+      <v-flex
+        xs12
+        mb-5
+      >
+        {{status}}
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -19,6 +25,7 @@
 export default {
   data () {
     return {
+      status: ''
     }
   },
   methods: {
@@ -30,7 +37,7 @@ export default {
             alert(state.tint)
           }
           if ('spin' in state) {
-            alert(state.spin)
+            state = state.spin
           }
         },
       }
