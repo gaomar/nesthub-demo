@@ -35,12 +35,12 @@ export default {
       onUpdate(state) {
         console.log('this=', this)
         console.log('onUpdate', JSON.stringify(state));
-        if ('tint' in state) {
-          alert(state.tint)
+        if ('bmi' in state) {
+          me.status = state.bmi
         }
         if ('spin' in state) {
           console.log(state.spin)
-          me.status = 'がおまる！'
+          me.status = state.spin
         }
       },
     }
