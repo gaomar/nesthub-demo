@@ -42,13 +42,12 @@ export default {
           this.status = 'がおまる'
         }
       },
-    }
+    }.bind(this)
     assistantCanvas.ready(callbacks)
   },
   methods: {
     bmiStart () {
       alert('bmi測定開始')
-      this.status = 'がおまる'
       assistantCanvas.sendTextQuery('bmi');
     }
   }
