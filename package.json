@@ -12,6 +12,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "encoding": "^0.1.12",
+    "fast-crc32c": "^1.0.4",
     "netlify-lambda": "^1.4.13",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
