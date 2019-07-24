@@ -18,7 +18,7 @@
 export default {
   methods: {
     bmiStart () {
-      assistantCanvas.sendTextQuery('bmi');
+      interactiveCanvas.sendTextQuery('bmi');
     }
   }
 }

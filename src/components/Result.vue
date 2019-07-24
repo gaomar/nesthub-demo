@@ -48,11 +48,11 @@ export default {
         }
       },
     }
-    assistantCanvas.ready(callbacks)
+    interactiveCanvas.ready(callbacks)
   },
   methods: {
     bmiStart () {
-      assistantCanvas.sendTextQuery('bmi');
+      interactiveCanvas.sendTextQuery('bmi');
     }
   }
 }
